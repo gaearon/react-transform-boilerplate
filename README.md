@@ -10,6 +10,8 @@ A *new* Webpack boilerplate with:
 Built with **[babel-plugin-react-transform](https://github.com/gaearon/babel-plugin-react-transform)** and a few custom transforms.  
 **[Does not](https://medium.com/@dan_abramov/the-death-of-react-hot-loader-765fa791d7c4)** use React Hot Loader.
 
+[![react-transform channel on slack](https://img.shields.io/badge/slack-react--transform%40reactiflux-61DAFB.svg?style=flat-square)](http://www.reactiflux.com)
+
 ## Demo
 
 ![](http://i.imgur.com/AhGY28T.gif)
@@ -33,6 +35,10 @@ The component instrumentation is implemented on top of **[babel-plugin-react-tra
 * **[react-transform-catch-errors](https://github.com/gaearon/react-transform-catch-errors)** catches component errors
 
 The syntax errors are displayed in an overlay by **[@glenjamin](https://github.com/glenjamin)**’s **[webpack-hot-middleware](https://github.com/glenjamin/webpack-hot-middleware)** which replaces Webpack Dev Server.
+
+## Discussion
+
+You can discuss React Transform and related projects in **#react-transform** channel on [Reactiflux Slack](http://reactiflux.com).
 
 ## License
 
