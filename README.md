@@ -1,12 +1,18 @@
-react-transform-boilerplate
+React Transform Boilerplate
 =====================
 
-A *new* Webpack boilerplate with hot reloading React components, and error handling on module and component level. The component instrumentation is implemented on top of [babel-plugin-react-transform](https://github.com/gaearon/babel-plugin-react-transform):
+A *new* Webpack boilerplate with:
 
-* [react-transform-webpack-hmr](https://github.com/gaearon/react-transform-webpack-hmr) handles hot reloading
-* [react-transform-catch-errors](https://github.com/gaearon/react-transform-catch-errors) catches component errors
+* hot reloading React components;
+* error handling inside component `render()` function;
+* error handling for syntax errors.
 
-The module level errors are displayed in an overlay by [webpack-hot-middleware](https://github.com/glenjamin/webpack-hot-middleware) which is used instead of Webpack Dev Server.
+The component instrumentation is implemented on top of **[babel-plugin-react-transform](https://github.com/gaearon/babel-plugin-react-transform)**:
+
+* **[react-transform-webpack-hmr](https://github.com/gaearon/react-transform-webpack-hmr)** handles hot reloading
+* **[react-transform-catch-errors](https://github.com/gaearon/react-transform-catch-errors)** catches component errors
+
+The syntax errors are displayed in an overlay by **[@glenjamin](https://github.com/glenjamin)**’s **[webpack-hot-middleware](https://github.com/glenjamin/webpack-hot-middleware)** which is used instead of Webpack Dev Server.
 
 ## Try It
 
