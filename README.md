@@ -7,9 +7,9 @@ A *new* Webpack boilerplate with:
 * error handling inside component `render()` function;
 * error handling for syntax errors.
 
-![](http://i.imgur.com/AhGY28T.gif)
+## Demo
 
-## Usage
+![](http://i.imgur.com/AhGY28T.gif)
 
 ```
 git clone https://github.com/gaearon/react-transform-boilerplate.git
