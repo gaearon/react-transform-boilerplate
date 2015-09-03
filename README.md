@@ -7,6 +7,8 @@ A *new* Webpack boilerplate with:
 * error handling inside component `render()` function;
 * error handling for syntax errors.
 
+Built with **[babel-plugin-react-transform](https://github.com/gaearon/babel-plugin-react-transform)** and a few custom transforms.
+
 ## Demo
 
 ![](http://i.imgur.com/AhGY28T.gif)
