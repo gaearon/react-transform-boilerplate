@@ -10,7 +10,7 @@
       "locals": ["module"]
     }, {
       "target": "react-transform-catch-errors",
-      "imports": ["react", "redbox-react/dist/redbox"]
+      "imports": ["react", "redbox-react"]
     }]
   }
 }
