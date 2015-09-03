@@ -8,7 +8,7 @@ A *new* Webpack boilerplate with:
 * error handling for syntax errors (thanks, **[@glenjamin](https://github.com/glenjamin)**!)
 
 Built with **[babel-plugin-react-transform](https://github.com/gaearon/babel-plugin-react-transform)** and a few custom transforms.  
-[Does not](https://medium.com/@dan_abramov/the-death-of-react-hot-loader-765fa791d7c4) use React Hot Loader.
+**[Does not](https://medium.com/@dan_abramov/the-death-of-react-hot-loader-765fa791d7c4)** use React Hot Loader.
 
 ## Demo
 
