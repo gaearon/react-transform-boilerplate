@@ -7,6 +7,8 @@ A *new* Webpack boilerplate with:
 * error handling inside component `render()` function;
 * error handling for syntax errors.
 
+![](http://i.imgur.com/AhGY28T.gif)
+
 ## Usage
 
 ```
