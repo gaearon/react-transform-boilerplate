@@ -42,4 +42,4 @@ You can discuss React Transform and related projects in **#react-transform** cha
 
 ## License
 
-MIT
+CC0 (public domain)
