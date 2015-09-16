@@ -24,7 +24,7 @@
     "react-transform"
   ],
   "author": "Dan Abramov <dan.abramov@me.com> (http://github.com/gaearon)",
-  "license": "MIT",
+  "license": "CC0",
   "bugs": {
     "url": "https://github.com/gaearon/react-transform-boilerplate/issues"
   },
