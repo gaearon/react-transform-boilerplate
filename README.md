@@ -31,7 +31,7 @@ Then go ahead and edit files inside `src` (any file except `index.js`).
 
 The component instrumentation is implemented on top of **[babel-plugin-react-transform](https://github.com/gaearon/babel-plugin-react-transform)**:
 
-* **[react-transform-webpack-hmr](https://github.com/gaearon/react-transform-webpack-hmr)** handles hot reloading
+* **[react-transform-hmr](https://github.com/gaearon/react-transform-hmr)** handles hot reloading
 * **[react-transform-catch-errors](https://github.com/gaearon/react-transform-catch-errors)** catches component errors
 
 The syntax errors are displayed in an overlay by **[@glenjamin](https://github.com/glenjamin)**’s **[webpack-hot-middleware](https://github.com/glenjamin/webpack-hot-middleware)** which replaces Webpack Dev Server.
