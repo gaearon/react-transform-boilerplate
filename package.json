@@ -1,9 +1,12 @@
 {
   "name": "react-transform-boilerplate",
-  "version": "0.1.0",
+  "version": "1.0.0",
   "description": "A new Webpack boilerplate with hot reloading React components, and error handling on module and component level.",
   "scripts": {
-    "start": "node server.js",
+    "clean": "rimraf dist",
+    "build:webpack": "NODE_ENV=production webpack --config webpack.config.prod.js",
+    "build": "npm run clean && npm run build:webpack",
+    "start": "node devServer.js",
     "lint": "eslint src"
   },
   "repository": {
@@ -37,9 +40,10 @@
     "eslint": "^1.3.1",
     "eslint-plugin-react": "^2.3.0",
     "express": "^4.13.3",
-    "react-transform-catch-errors": "^0.1.1",
-    "react-transform-hmr": "^0.1.6",
+    "react-transform-catch-errors": "^1.0.0",
+    "react-transform-hmr": "^1.0.0",
     "redbox-react": "^1.0.1",
+    "rimraf": "^2.4.3",
     "webpack": "^1.9.6",
     "webpack-dev-middleware": "^1.2.0",
     "webpack-hot-middleware": "^2.0.0"
