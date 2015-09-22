@@ -38,6 +38,10 @@ The syntax errors are displayed in an overlay by **[@glenjamin](https://github.c
 
 ## Troubleshooting
 
+### I can’t serve images / use different HTML file / etc
+
+This boilerplate is just a Webpack bundle served by an Express server. It’s not meant to demonstrate every feature of either project. Please consult Webpack and Express docs to learn how to serve images, or bundle them into your JavaScript application.
+
 ### I don’t see the syntax error overlay!
 
 Make sure your react-app is not attached to `document.body` as the client overlay provided by [webpack-hot-middleware](https://github.com/glenjamin/webpack-hot-middleware) will render into `document.body`.
