@@ -58,7 +58,7 @@ React.render(<App />, document.getElementById('root'))
 
 ## Discussion
 
-You can discuss React Transform and related projects in **#react-transform** channel on [Reactiflux Slack](http://reactiflux.com).
+You can discuss React Transform and related projects in **#react-transform** channel on [Reactiflux Discord](http://reactiflux.com).
 
 ## License
 
