@@ -1,11 +1,7 @@
-># Babel 6 Not Supported Yet
-
->We don’t support Babel 6 yet.  
->If you’d like, you can [contribute to help make it happen](https://github.com/gaearon/babel-plugin-react-transform/issues/46).
-
-
 React Transform Boilerplate
 =====================
+
+### _With Babel 6 Support_
 
 A *new* Webpack boilerplate with:
 
