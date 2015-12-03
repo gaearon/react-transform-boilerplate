@@ -57,9 +57,10 @@ It’s always better to render your React app in a `#root` DOM element.
 
 ```js
 import React from 'react'
+import { render } from 'react-dom'
 import { App } from 'app'
 
-React.render(<App />, document.getElementById('root'))
+render(<App />, document.getElementById('root'))
 ```
 
 ## Discussion
