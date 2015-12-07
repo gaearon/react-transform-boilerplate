@@ -29,11 +29,15 @@ Transforms are enabled for files inside `src` (except `index.js`).
 
 ## Troubleshooting
 
-#### I can’t serve images / use different HTML file / etc
+#### I can’t serve images, use different HTML, etc.
 
 This project is a reference implementation of **[babel-plugin-react-transform](https://github.com/gaearon/babel-plugin-react-transform)**—it is just a Webpack bundle served by an Express server. It’s not meant to demonstrate every feature of either project. Please consult Webpack and Express docs to learn how to serve images, or bundle them into your JavaScript application.
 
-#### I don’t see the syntax error overlay!
+#### My server is throwing a 404 after `npm run build`
+
+Again, this boilerplate is **not** intended to be production ready. The 404 is because `index.html` is hard coded with the webpack bundle path in `/static/` (used by development server). You must manually update the script tag in `index.html` with the correct bundle path of `/dist/bundle.js` in order to use compiled source.
+
+#### I don’t see the syntax error overlay
 
 Make sure your react-app is not attached to `document.body`. The client overlay provided by [webpack-hot-middleware](https://github.com/glenjamin/webpack-hot-middleware) will render into `document.body`. 
 
