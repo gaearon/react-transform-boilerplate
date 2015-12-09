@@ -4,7 +4,7 @@
   "description": "A new Webpack boilerplate with hot reloading React components, error handling on module and component level and Visual Studio Code integration",
   "scripts": {
     "clean": "rimraf dist",
-    "build:webpack": "webpack --config webpack.config.prod.js",
+    "build:webpack": "webpack --progress --colors --config webpack.config.prod.js",
     "build": "npm run clean && npm run build:webpack",
     "start": "node devServer.js",
     "lint": "eslint src"
@@ -43,6 +43,7 @@
     "eslint-plugin-babel": "^3.0.0",
     "eslint-plugin-react": "^3.11.3",
     "express": "^4.13.3",
+    "html-webpack-plugin": "^1.7.0",
     "react-transform-catch-errors": "^1.0.0",
     "react-transform-hmr": "^1.0.1",
     "redbox-react": "^1.2.0",
