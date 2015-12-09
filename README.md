@@ -1,6 +1,6 @@
 # React Transform Boilerplate
 
-[![react-transform channel on slack](https://img.shields.io/badge/slack-react--transform%40reactiflux-61DAFB.svg?style=flat-square)](http://www.reactiflux.com)
+[![react-transform channel on Discord](https://img.shields.io/badge/discord-react--transform%40reactiflux-61DAFB.svg?style=flat-square)](http://www.reactiflux.com)
 
 :rocket: **Now  with [Babel 6](https://github.com/babel/babel) support** (thanks [@justingreenberg](https://github.com/justingreenberg))
 
