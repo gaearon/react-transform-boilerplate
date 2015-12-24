@@ -53,6 +53,12 @@ import { App } from 'app'
 render(<App />, document.getElementById('root'))
 ```
 
+#### The transforms (don’t) run in a specific environment (Gulp, server, tests)
+
+If you’re having troubles controlling whether the transforms are enabled or disabled by using `NODE_ENV` variable, you can also put the Babel configuration inside the Webpack config. Read how to configure Babel from Webpack config in the [babel-loader documentation](https://github.com/babel/babel-loader#options).
+
+These transforms are **only** meant to be enabled on the client in the development environment. They are not meant to be enabled on the server, in the production, during tests, etc.
+
 ## Discussion
 
 You can discuss React Transform and related projects in **#react-transform** channel on [Reactiflux Discord](http://reactiflux.com).
