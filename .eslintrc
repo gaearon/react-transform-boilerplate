@@ -11,6 +11,7 @@
   "rules": {
     "quotes": [2, "single"],
     "strict": [2, "never"],
+    "semi": [2, "always"],
     "babel/generator-star-spacing": 1,
     "babel/new-cap": 1,
     "babel/object-shorthand": 1,

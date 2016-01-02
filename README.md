@@ -43,10 +43,6 @@ No! This is only meant for client development environment. Make sure your `NODE_
 
 This project is a reference implementation of **[babel-plugin-react-transform](https://github.com/gaearon/babel-plugin-react-transform)**—it is just a Webpack bundle served by an Express server. It’s not meant to demonstrate every feature of either project. Please consult Webpack and Express docs to learn how to serve images, or bundle them into your JavaScript application.
 
-#### My server is throwing a 404 after `npm run build`
-
-Again, this boilerplate is **not** intended to be production ready. The 404 is because `index.html` is hard coded with the webpack bundle path in `/static/` (used by development server). You must manually update the script tag in `index.html` with the correct bundle path of `/dist/bundle.js` in order to use compiled source.
-
 #### What errors does it catch?
 
 `react-transform-catch-errors` catches **runtime errors inside `render()` method** of React componets it detects.
@@ -62,7 +58,7 @@ However you can use WebpackDevServer instead of the custom server just fine.
 
 #### I don’t see the syntax error overlay
 
-Make sure your react-app is not attached to `document.body`. The client overlay provided by [webpack-hot-middleware](https://github.com/glenjamin/webpack-hot-middleware) will render into `document.body`. 
+Make sure your react-app is not attached to `document.body`. The client overlay provided by [webpack-hot-middleware](https://github.com/glenjamin/webpack-hot-middleware) will render into `document.body`.
 
 Attaching the React root node to `document.body` requires extra caution, as many third-party packages will append their markup to the body as well. React will replace the entire contents in the body on every re-render. Thus you will not see the additional markup.
 
@@ -72,7 +68,7 @@ It’s always better to render your React app in a `#root` DOM element.
 import React from 'react'
 import { render } from 'react-dom'
 import { App } from 'app'
-     
+
 render(<App />, document.getElementById('root'))
 ```
 
