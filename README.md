@@ -4,7 +4,7 @@
 
 :rocket: **Now  with [Babel 6](https://github.com/babel/babel) support** (thanks [@justingreenberg](https://github.com/justingreenberg))
 
-This project is a reference implementation of **[babel-plugin-react-transform](https://github.com/gaearon/babel-plugin-react-transform)** can be used as a boilerplate for quickly getting a new project up and running with a few useful transforms:
+This project is a reference implementation of **[babel-plugin-react-transform](https://github.com/gaearon/babel-plugin-react-transform)**. It can be used as a boilerplate for quickly getting a new project up and running with a few useful transforms:
 
 * [**react-transform-hmr**](https://github.com/gaearon/react-transform-hmr) - enables hot reloading react components
 * [**react-transform-catch-errors**](https://github.com/gaearon/react-transform-catch-errors) - catches errors inside `render()`
