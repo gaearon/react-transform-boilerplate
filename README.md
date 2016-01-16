@@ -37,7 +37,7 @@ No! This is experimental stuff. It’s not polished, it doesn’t work in all br
 
 #### Should I run this on the server / in tests / in production?
 
-No! This is only meant for client development environment. Make sure your `NODE_ENV` is neither `development` nor empty in these environments. Alternateively you can put the Babel configuration under a different `env` key and use your custom `NODE_ENV` or `BABEL_ENV` to turn these transforms on. Or you can [embed Babel configuration inside the Webpack config ](https://github.com/babel/babel-loader#options). No matter how you do it, **make sure you’re *only* running this transform in client-side development mode, and it is disabled on the server, in tests, and in production.**
+No! This is only meant for client development environment. Make sure your `NODE_ENV` is neither `development` nor empty in these environments. Alternatively you can put the Babel configuration under a different `env` key and use your custom `NODE_ENV` or `BABEL_ENV` to turn these transforms on. Or you can [embed Babel configuration inside the Webpack config ](https://github.com/babel/babel-loader#options). No matter how you do it, **make sure you’re *only* running this transform in client-side development mode, and it is disabled on the server, in tests, and in production.**
 
 #### I can’t serve images, use different HTML, add CSS, etc.
 
