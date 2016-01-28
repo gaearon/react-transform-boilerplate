@@ -9,7 +9,7 @@ This project is a reference implementation of **[babel-plugin-react-transform](h
 * [**react-transform-hmr**](https://github.com/gaearon/react-transform-hmr) - enables hot reloading react components
 * [**react-transform-catch-errors**](https://github.com/gaearon/react-transform-catch-errors) - catches errors inside `render()`
 
-For convenience they are packed in a single preset called [**react-transform-hmre**](https://github.com/danmartinez101/babel-preset-react-hmre) but you can make your own.
+For convenience, they are packed in a single preset called [**react-transform-hmre**](https://github.com/danmartinez101/babel-preset-react-hmre) but you can make your own.
 
 Syntax errors are displayed in an overlay using **[@glenjamin](https://github.com/glenjamin)**’s **[webpack-hot-middleware](https://github.com/glenjamin/webpack-hot-middleware)**, which replaces Webpack Dev Server. This project **[does not](https://medium.com/@dan_abramov/the-death-of-react-hot-loader-765fa791d7c4)** use React Hot Loader.
 
@@ -37,7 +37,7 @@ No! This is experimental stuff. It’s not polished, it doesn’t work in all br
 
 #### Should I run this on the server / in tests / in production?
 
-No! This is only meant for client development environment. Make sure your `NODE_ENV` is neither `development` nor empty in these environments. Alternateively you can put the Babel configuration under a different `env` key and use your custom `NODE_ENV` or `BABEL_ENV` to turn these transforms on. Or you can [embed Babel configuration inside the Webpack config ](https://github.com/babel/babel-loader#options). No matter how you do it, **make sure you’re *only* running this transform in client-side development mode, and it is disabled on the server, in tests, and in production.**
+No! This is only meant for client development environment. Make sure your `NODE_ENV` is neither `development` nor empty in these environments. Alternatively you can put the Babel configuration under a different `env` key and use your custom `NODE_ENV` or `BABEL_ENV` to turn these transforms on. Or you can [embed Babel configuration inside the Webpack config ](https://github.com/babel/babel-loader#options). No matter how you do it, **make sure you’re *only* running this transform in client-side development mode, and it is disabled on the server, in tests, and in production.**
 
 #### I can’t serve images, use different HTML, add CSS, etc.
 
@@ -49,7 +49,7 @@ Again, this boilerplate is **not** intended to be production ready. The 404 is b
 
 #### What errors does it catch?
 
-`react-transform-catch-errors` catches **runtime errors inside `render()` method** of React componets it detects.
+`react-transform-catch-errors` catches **runtime errors inside `render()` method** of React components it detects.
 Webpack Hot Middleware catches **syntax errors anywhere in the module**.
 
 These are two different tools and you need to be aware of that.
@@ -58,13 +58,13 @@ These are two different tools and you need to be aware of that.
 
 Absolutely! We only show Express server with `webpack-dev-middleware` and `webpack-hot-middleware` because people often have a Node server anyway, and it can be tricky to configure WebpackDevServer to work with existing server. Additionally, `webpack-hot-middleware` displays syntax errors in an overlay, which WebpackDevServer doesn’t do.
 
-However you can use WebpackDevServer instead of the custom server just fine.
+However, you can use WebpackDevServer instead of the custom server just fine.
 
 #### I don’t see the syntax error overlay
 
 Make sure your react-app is not attached to `document.body`. The client overlay provided by [webpack-hot-middleware](https://github.com/glenjamin/webpack-hot-middleware) will render into `document.body`. 
 
-Attaching the React root node to `document.body` requires extra caution, as many third-party packages will append their markup to the body as well. React will replace the entire contents in the body on every re-render. Thus you will not see the additional markup.
+Attaching the React root node to `document.body` requires extra caution, as many third-party packages will append their markup to the body as well. React will replace the entire contents in the body on every re-render. Thus, you will not see the additional markup.
 
 It’s always better to render your React app in a `#root` DOM element.
 
