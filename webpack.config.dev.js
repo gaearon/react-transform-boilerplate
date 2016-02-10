@@ -5,22 +5,23 @@ var HtmlWebpackPlugin = require('html-webpack-plugin');
 module.exports = {
   devtool: 'cheap-module-inline-source-map',
   entry: [
+    'eventsource-polyfill',
     'webpack-hot-middleware/client',
     './src/index'
   ],
   output: {
     devtoolModuleFilenameTemplate: function(info){
       if(info.absoluteResourcePath.charAt(0) === '/') {
-        return "file://"+info.absoluteResourcePath;
+        return 'file://'+info.absoluteResourcePath;
       } else {
-        return "file:///"+info.absoluteResourcePath;
+        return 'file:///'+info.absoluteResourcePath;
       }      
     },
     devtoolFallbackModuleFilenameTemplate: function(info){
       if(info.absoluteResourcePath.charAt(0) === '/') {
-        return "file://"+info.absoluteResourcePath+'?'+info.hash;
+        return 'file://'+info.absoluteResourcePath+'?'+info.hash;
       } else {
-        return "file:///"+info.absoluteResourcePath+'?'+info.hash;
+        return 'file:///'+info.absoluteResourcePath+'?'+info.hash;
       }      
     },
     path: path.join(__dirname, 'dist'),
@@ -28,15 +29,11 @@ module.exports = {
   },
   plugins: [
     new webpack.HotModuleReplacementPlugin(),
-    new webpack.NoErrorsPlugin(),
-    new HtmlWebpackPlugin({
-      template: 'index.html', // Load a custom template 
-      inject: 'body' // Inject all scripts into the body 
-    })
+    new webpack.NoErrorsPlugin()
   ],
   module: {
     loaders: [{
-      test: /\.js$/,
+      test: /\.jsx?$/,
       loaders: ['babel'],
       include: path.join(__dirname, 'src')
     }]
