@@ -51,7 +51,7 @@
     "rimraf": "^2.5.1",
     "webpack": "^1.12.13",
     "webpack-dev-middleware": "^1.5.1",
-    "webpack-hot-middleware": "^2.7.0",
+    "webpack-hot-middleware": "^2.7.1",
     "eventsource-polyfill": "^0.9.6"
   },
   "dependencies": {
