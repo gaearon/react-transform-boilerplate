@@ -2,9 +2,27 @@
 
 [![react-transform channel on Discord](https://img.shields.io/badge/discord-react--transform%40reactiflux-61DAFB.svg?style=flat-square)](http://www.reactiflux.com)
 
-:rocket: **Now  with [Babel 6](https://github.com/babel/babel) support** (thanks [@justingreenberg](https://github.com/justingreenberg))
+## 🚧🚧🚧🚧🚧
 
-This project is a reference implementation of **[babel-plugin-react-transform](https://github.com/gaearon/babel-plugin-react-transform)**. It can be used as a boilerplate for quickly getting a new project up and running with a few useful transforms:
+### Highly Experimental
+
+This is **highly experimental tech**. If you’re enthusiastic about hot reloading, by all means, give it a try, but don’t bet your project on it. Either of the technologies it relies upon may change drastically or get deprecated any day. You’ve been warned 😉 .
+
+### Not a Boilerplate
+
+While this is a boilerplate project, it is not the kind that you can copy, paste, and forget. It does not help you pick the right structure for your app, and it does not show how to handle problems like images, static assets, CSS, server rendering, etc.
+
+**It exists to prototype next-generation React developer experience** with hot reloading that preserves component state and DOM, and error handling both for syntax and runtime errors in `render()`. You can learn techniques from this boilerplate and use them in your project but please don’t copy it blindly if you don’t know the underlying technologies well. Otherwise you are likely to get disillusioned with JavaScript tooling.
+
+**No effort went into making this user-friendly yet. The goal is to eventually kill this technology** in favor of less hacky technologies baked into React. These projects are not long term.
+
+### You May Not Need It
+
+Even if you like hot reloading, you still may not need React Transform. If you use something like [Redux](https://github.com/reactjs/redux) for managing your state, we suggest that you just [use Webpack HMR API directly instead of all the hacky proxies and Babel plugins](https://github.com/reactjs/redux/pull/1455). Seriously, check it out, it’s a much cleaner solution that may work great for you.
+
+## About
+
+This project is a reference implementation of **[babel-plugin-react-transform](https://github.com/gaearon/babel-plugin-react-transform)**. It can be used as a boilerplate demonstrating a few useful transforms:
 
 * [**react-transform-hmr**](https://github.com/gaearon/react-transform-hmr) - enables hot reloading react components
 * [**react-transform-catch-errors**](https://github.com/gaearon/react-transform-catch-errors) - catches errors inside `render()`
@@ -41,7 +59,7 @@ No! This is only meant for client development environment. Make sure your `NODE_
 
 #### I can’t serve images, use different HTML, add CSS, etc.
 
-This project is a reference implementation of **[babel-plugin-react-transform](https://github.com/gaearon/babel-plugin-react-transform)**—it is just a Webpack bundle served by an Express server. It’s not meant to demonstrate every feature of either project. Please consult Webpack and Express docs to learn how to serve images, or bundle them into your JavaScript application.
+This project is a reference implementation of **[babel-plugin-react-transform](https://github.com/gaearon/babel-plugin-react-transform)**—it is just a Webpack bundle served by an Express server. It’s not meant to demonstrate every feature of either project. Please consult Webpack and Express docs to learn how to serve images, or bundle them into your JavaScript application. For example, [you can use `express.static()` to serve static assets](https://github.com/gaearon/react-transform-boilerplate/pull/52).
 
 #### My server is throwing a 404 after `npm run build`
 
@@ -79,6 +97,10 @@ render(<App />, document.getElementById('root'))
 ## Discussion
 
 You can discuss React Transform and related projects in **#react-transform** channel on [Reactiflux Discord](http://reactiflux.com).
+
+## Thanks
+
+* [@justingreenberg](https://github.com/justingreenberg) and [@thejameskyle](https://github.com/thejameskyle) for Babel 6 support.
 
 ## License
 
