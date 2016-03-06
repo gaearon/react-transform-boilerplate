@@ -69,10 +69,6 @@ Note that by “components” we currently mean components created either by inh
 
 That said you can write manual code to handle hot updates of modules that don’t end up consumed by components. For example, this is how [we hot replace reducers in Redux](https://github.com/reactjs/redux/blob/952b45d6d74f1789ddc4ed05043a2c6e1a5ea808/examples/async/store/configureStore.js#L13-L19).
 
-#### My server is throwing a 404 after `npm run build`
-
-Again, this boilerplate is **not** intended to be production ready. The 404 is because `index.html` is hard coded with the webpack bundle path in `/static/` (used by development server). You must manually update the script tag in `index.html` with the correct bundle path of `/dist/bundle.js` in order to use compiled source.
-
 #### What errors does it catch?
 
 `react-transform-catch-errors` catches **runtime errors inside `render()` method** of React components it detects.
@@ -101,6 +97,22 @@ import { App } from 'app'
      
 render(<App />, document.getElementById('root'))
 ```
+
+#### How can I have multiple entry points?
+
+Your config could look like this:
+
+```js
+const config = {
+  entry: {
+    A: ['webpack-hot-middleware/client', './src/a.js'],
+    B: ['webpack-hot-middleware/client', './src/b.js']
+  },
+  // ...
+}
+```
+
+Note that the order of files inside the entry point is important. And don’t forget to exclude the hot middleware client from the production builds!
 
 ## Discussion
 
