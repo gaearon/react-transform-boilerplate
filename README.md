@@ -61,6 +61,14 @@ No! This is only meant for client development environment. Make sure your `NODE_
 
 This project is a reference implementation of **[babel-plugin-react-transform](https://github.com/gaearon/babel-plugin-react-transform)**—it is just a Webpack bundle served by an Express server. It’s not meant to demonstrate every feature of either project. Please consult Webpack and Express docs to learn how to serve images, or bundle them into your JavaScript application. For example, [you can use `express.static()` to serve static assets](https://github.com/gaearon/react-transform-boilerplate/pull/52).
 
+#### I get “full reload needed” when I edit some files
+
+Webpack hot module updates follow the import chain. As long as a module “ends up” being imported from components only, hot updates should work. If a specific module import chain ends in something like `index.js` which is not a component, hot updates will fail because `react-transform-hmr` has no idea how to handle updates to something other than components.
+
+Note that by “components” we currently mean components created either by inheriting from `React.Component` or created with `React.createClass()`. We don’t currently support functional components although [this might be implemented for the future](https://github.com/gaearon/babel-plugin-react-transform/issues/57). If you use something like Redux, note that you can get support for functional components for free without React Transform—maybe [this is exactly what you want?](https://github.com/reactjs/redux/pull/1455)
+
+That said you can write manual code to handle hot updates of modules that don’t end up consumed by components. For example, this is how [we hot replace reducers in Redux](https://github.com/reactjs/redux/blob/952b45d6d74f1789ddc4ed05043a2c6e1a5ea808/examples/async/store/configureStore.js#L13-L19).
+
 #### My server is throwing a 404 after `npm run build`
 
 Again, this boilerplate is **not** intended to be production ready. The 404 is because `index.html` is hard coded with the webpack bundle path in `/static/` (used by development server). You must manually update the script tag in `index.html` with the correct bundle path of `/dist/bundle.js` in order to use compiled source.
