@@ -18,7 +18,7 @@ While this is a boilerplate project, it is not the kind that you can copy, paste
 
 ### You May Not Need It
 
-Even if you like hot reloading, you still may not need React Transform. If you use something like [Redux](https://github.com/reactjs/redux) for managing your state, we suggest that you just [use Webpack HMR API directly instead of all the hacky proxies and Babel plugins](https://github.com/reactjs/redux/pull/1455). Seriously, check it out, it’s a much cleaner solution that may work great for you.
+Even if you like hot reloading, you still may not need React Transform. **If you use something like [Redux](https://github.com/reactjs/redux) for managing your state, we suggest that you just [use Webpack HMR API directly instead of all the hacky proxies, Babel plugins, and all that jazz](https://github.com/reactjs/redux/pull/1455).** Seriously, check it out, it’s a much cleaner solution that may work great for you.
 
 ## About
 
