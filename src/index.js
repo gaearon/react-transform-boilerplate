@@ -5,6 +5,11 @@ import forceUpdate from 'react-deep-force-update'
 
 const Components = new Map()
 
+const methodsFrom = (obj) => {
+  return Object.getOwnPropertyNames(obj)
+    .filter((m) => typeof obj[m] == 'function')
+}
+
 const patchRender = (Component) => {
   const id = Component.__id
   return function(...args) {
@@ -13,16 +18,13 @@ const patchRender = (Component) => {
 }
 
 const patchPrototype = (Component) => {
-  for (const method of Object.getOwnPropertyNames(Component.prototype)) {
-    if (typeof Component.prototype[method] == 'function') {
-      const bind = (ctx, ...boundArgs) => {
-        return (...args) => {
-          return Component.prototype[method].call(ctx, ...boundArgs, ...args)
-        }
+  methodsFrom(Component.prototype).forEach((method) => {
+    Component.prototype[method].bind = (ctx, ...boundArgs) => {
+      return (...args) => {
+        return Component.prototype[method].call(ctx, ...boundArgs, ...args)
       }
-      Component.prototype[method].bind = bind
     }
-  }
+  })
 }
 
 const patchComponent = (Component) => {
@@ -51,10 +53,14 @@ const updateComponent = (NextComponent) => {
   if (React.Component.prototype.isPrototypeOf(NextComponent.prototype)) {
     patchPrototype(NextComponent)
 
-    for (const method of Object.getOwnPropertyNames(NextComponent.prototype)) {
+    methodsFrom(PrevComponent.prototype).forEach((method) => {
+      if (!(method in NextComponent.prototype)) {
+        delete PrevComponent.prototype[method]
+      }
+    })
+    methodsFrom(NextComponent.prototype).forEach((method) => {
       PrevComponent.prototype[method] = NextComponent.prototype[method]
-    }
-    // TODO: remove methods that do not exist in NextComponent.prototype
+    })
 
     return PrevComponent
   } else {
