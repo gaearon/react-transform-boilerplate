@@ -54,6 +54,7 @@ const updateComponent = (NextComponent) => {
     for (const method of Object.getOwnPropertyNames(NextComponent.prototype)) {
       PrevComponent.prototype[method] = NextComponent.prototype[method]
     }
+    // TODO: remove methods that do not exist in NextComponent.prototype
 
     return PrevComponent
   } else {
