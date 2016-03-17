@@ -42,9 +42,15 @@ const patchComponent = (Component) => {
 const updateComponent = (NextComponent) => {
   console.log('update', NextComponent.__id)
 
+  const PrevComponent = Components.get(NextComponent.__id)
+  if (!PrevComponent) {
+    // this isn't registered as a react component, nothing to do
+    return
+  }
+
   if (React.Component.prototype.isPrototypeOf(NextComponent.prototype)) {
     patchPrototype(NextComponent)
-    const PrevComponent = Components.get(NextComponent.__id)
+
     for (const method of Object.getOwnPropertyNames(NextComponent.prototype)) {
       PrevComponent.prototype[method] = NextComponent.prototype[method]
     }
@@ -52,6 +58,7 @@ const updateComponent = (NextComponent) => {
     return PrevComponent
   } else {
     Components.set(NextComponent.__id, NextComponent)
+
     return NextComponent
   }
 }
@@ -70,10 +77,7 @@ React.createElement = function createElement(type, ...args) {
   return realCreateElement(type, ...args)
 }
 
-const tree = render(
-  <App />,
-  document.getElementById('root')
-);
+const tree = render(<App />, document.getElementById('root'));
 
 if (module.hot) {
   module.hot.accept('./App', () => {
