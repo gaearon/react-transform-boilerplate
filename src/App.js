@@ -44,7 +44,7 @@ class App extends Component {
     return (
       <div>
         <BogusText text='yay' />
-        <Counter increment={10} color={SUPER_NICE} />
+        <Counter increment={2} color={SUPER_NICE} />
         <Counter increment={5} color={SUPER_NICE} />
       </div>
     );
@@ -53,6 +53,8 @@ class App extends Component {
 
 App.__id = 'App'
 
-const BogusText = ({text}) => <div>{text}hhhh</div>
+const BogusText = ({text}) => <div>{text}</div>
+
+BogusText.__id = 'BogusText'
 
 export {App}
