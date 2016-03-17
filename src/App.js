@@ -27,13 +27,32 @@ class Counter extends Component {
   }
 }
 
-export class App extends Component {
+Counter.__id = 'Counter'
+
+class App extends Component {
+  constructor(props) {
+    super(props)
+    this.blah = this.blah.bind(this)
+  }
+
+  blah() {
+    console.log('yay')
+  }
+
   render() {
+    this.blah()
     return (
       <div>
-        <Counter increment={1} color={NICE} />
+        <BogusText text='yay' />
+        <Counter increment={10} color={SUPER_NICE} />
         <Counter increment={5} color={SUPER_NICE} />
       </div>
     );
   }
 }
+
+App.__id = 'App'
+
+const BogusText = ({text}) => <div>{text}hhhh</div>
+
+export {App}
