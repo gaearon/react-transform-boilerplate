@@ -5,6 +5,7 @@
                 "name": "Debug",
                 "type": "chrome",
                 "request": "launch",
+                "webRoot": "${workspaceRoot}",
                 "url": "http://localhost:3000/index.html",
                 "preLaunchTask": "development",   
                 "sourceMaps": true
