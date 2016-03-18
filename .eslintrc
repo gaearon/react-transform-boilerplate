@@ -11,6 +11,7 @@
     "browser": true,
     "node": true
   },
+  "extends": "eslint:recommended",
   "parser": "babel-eslint",
   "rules": {
     "quotes": [2, "single"],
