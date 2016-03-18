@@ -1,32 +1,38 @@
 {
-  "parserOptions": {
-    "ecmaFeatures": {
-      "jsx": true
+    "parserOptions": {
+        "ecmaFeatures": {
+            "jsx": true
+        },
+        "sourceType": "module",
+        "ecmaVersion": 6
     },
-    "sourceType": "module",
-    "ecmaVersion": 6
-  },
-  "env": {
-    "es6": true,
-    "browser": true,
-    "node": true
-  },
-  "extends": "eslint:recommended",
-  "parser": "babel-eslint",
-  "rules": {
-    "quotes": [2, "single"],
-    "strict": [2, "never"],
-    "babel/generator-star-spacing": 1,
-    "babel/new-cap": 1,
-    "babel/object-shorthand": 1,
-    "babel/arrow-parens": 1,
-    "babel/no-await-in-loop": 1,
-    "react/jsx-uses-react": 2,
-    "react/jsx-uses-vars": 2,
-    "react/react-in-jsx-scope": 2
-  },
-  "plugins": [
-    "babel",
-    "react"
-  ]
+    "env": {
+        "es6": true,
+        "browser": true,
+        "node": true
+    },
+    "extends": "eslint:recommended",
+    "parser": "babel-eslint",
+    "rules": {
+        "quotes": [
+            2,
+            "single"
+        ],
+        "strict": [
+            2,
+            "never"
+        ],
+        "babel/generator-star-spacing": 1,
+        "babel/new-cap": 1,
+        "babel/object-shorthand": 1,
+        "babel/arrow-parens": 1,
+        "babel/no-await-in-loop": 1,
+        "react/jsx-uses-react": 2,
+        "react/jsx-uses-vars": 2,
+        "react/react-in-jsx-scope": 2
+    },
+    "plugins": [
+        "babel",
+        "react"
+    ]
 }
