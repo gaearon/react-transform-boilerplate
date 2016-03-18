@@ -14,6 +14,7 @@ Based on:
 
 ## Visual Studio Code shortcuts
 
+*   F1 > Run Task > development
 *   F5 to start debugging
 *   CTRL+SHIFT+B to build a production release
 *   CTRL+SHIFT+T to run eslint
@@ -23,4 +24,3 @@ Based on:
 ## License
 
 CC0 (public domain)
-domain)

@@ -20,6 +20,7 @@
 				"run",
 				"start" 
 			],
+            "isWatching": true,
 			"taskName": "development"
 		},
 		{
@@ -34,7 +35,7 @@
 			"args": [
 				"install"
 			],
-			"taskName": "install"
+			"taskName": "install"            
 		},		
 		{
 			"args": [
