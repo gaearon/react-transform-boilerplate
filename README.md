@@ -3,6 +3,10 @@
 Based on:
 * [**react-transform-boilerplate**](https://github.com/gaearon/react-transform-boilerplate)
 
+Visual Studio Code:
+* [**Download**](https://code.visualstudio.com/)
+* [**Tips and Tricks**](https://github.com/Microsoft/vscode-tips-and-tricks)
+
 ## Installation
 
 
