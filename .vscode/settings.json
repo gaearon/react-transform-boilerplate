@@ -2,6 +2,9 @@
 {
 	"eslint.enable": true,
 	"files.exclude": {
-		".vscode/chrome/**": true
-	}    
+		".vscode/chrome/": true
+	},
+	"search.exclude": {
+		"dist/": true
+	}
 }
