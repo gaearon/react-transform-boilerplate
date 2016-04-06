@@ -1,7 +1,7 @@
-import React from 'react';
+import React, { Component } from 'react';
 import { NICE, SUPER_NICE } from './colors';
 
-class Counter extends React.Component {
+class Counter extends Component {
     constructor(props) {
         super(props);
         this.state = { counter: 0 };
@@ -27,7 +27,7 @@ class Counter extends React.Component {
     }
 }
 
-export class App extends React.Component {
+export class App extends Component {
     render() {
         return (
             <div>
