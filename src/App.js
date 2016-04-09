@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { NICE, SUPER_NICE } from './colors';
+import OtherCounter from './hoc'
 
 class Counter extends Component {
   constructor(props) {
@@ -10,7 +11,7 @@ class Counter extends Component {
 
   tick() {
     this.setState({
-      counter: this.state.counter + this.props.increment
+      counter: this.state.counter - this.props.increment
     });
   }
 
@@ -44,10 +45,11 @@ export class App extends Component {
     return (
       <div>
         <BogusContainer>
-          <Counter increment={50} color={NICE} />
+          <Counter increment={10} color={NICE} />
         </BogusContainer>
         <Counter increment={2} color={SUPER_NICE} />
         <Counter increment={5} color={SUPER_NICE} />
+        <OtherCounter increment={5} color={NICE} />
       </div>
     );
   }
