@@ -36,15 +36,17 @@ export class App extends Component {
   }
 
   blah() {
-    console.log('yay')
+    console.log('double yay')
   }
 
   render() {
     this.blah()
     return (
       <div>
-        <BogusText text='yay' />
-        <Counter increment={10} color={SUPER_NICE} />
+        <BogusContainer>
+          <Counter increment={50} color={NICE} />
+        </BogusContainer>
+        <Counter increment={2} color={SUPER_NICE} />
         <Counter increment={5} color={SUPER_NICE} />
       </div>
     );
@@ -53,6 +55,6 @@ export class App extends Component {
 
 App.__id = 'App'
 
-const BogusText = ({text}) => <div>{text}</div>
+const BogusContainer = ({children}) => <div>bogus: {children}</div>
 
-BogusText.__id = 'BogusText'
+BogusContainer.__id = 'BogusText'

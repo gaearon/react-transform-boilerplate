@@ -3,7 +3,11 @@ import { render } from 'react-dom';
 import { App } from './App';
 import forceUpdate from 'react-deep-force-update'
 
+const id = (Component) => Component.__id || Component.displayName || Component.name
+
 const Components = new Map()
+const SFCWrappers = new Map()
+const Updated = new WeakSet()
 
 const methodsFrom = (obj) => {
   return Object.getOwnPropertyNames(obj)
@@ -11,10 +15,11 @@ const methodsFrom = (obj) => {
 }
 
 const patchRender = (Component) => {
-  const id = Component.__id
-  return function(...args) {
-    return Components.get(id).apply(this, args)
-  }
+  const _id = id(Component)
+  SFCWrappers.set(_id, function(...args) {
+    return Components.get(_id).apply(this, args)
+  })
+  return SFCWrappers.get(_id)
 }
 
 const patchPrototype = (Component) => {
@@ -28,13 +33,16 @@ const patchPrototype = (Component) => {
 }
 
 const patchComponent = (Component) => {
-  console.log('first', Component.__id)
+  console.log('first', id(Component))
 
-  Components.set(Component.__id, Component)
+  Components.set(id(Component), Component)
+  Updated.add(Component)
 
   if (React.Component.prototype.isPrototypeOf(Component.prototype)) {
+    // `class extends React.Component` components
     patchPrototype(Component)
-  } else {
+  } else if (Object.getPrototypeOf(Component.prototype) == Object.prototype) {
+    // SFCs
     Component = patchRender(Component)
   }
 
@@ -42,15 +50,23 @@ const patchComponent = (Component) => {
 }
 
 const updateComponent = (NextComponent) => {
-  console.log('update', NextComponent.__id)
+  const PrevComponent = Components.get(id(NextComponent))
 
-  const PrevComponent = Components.get(NextComponent.__id)
   if (!PrevComponent) {
     // this isn't registered as a react component, nothing to do
     return
   }
 
+  if (Updated.has(NextComponent)) {
+    // this component has been updated, just return the original
+    return PrevComponent
+  }
+
+  Updated.add(NextComponent)
+  console.log('update', id(NextComponent))
+
   if (React.Component.prototype.isPrototypeOf(NextComponent.prototype)) {
+    // `class extends React.Component` components
     patchPrototype(NextComponent)
 
     methodsFrom(PrevComponent.prototype).forEach((method) => {
@@ -63,9 +79,14 @@ const updateComponent = (NextComponent) => {
     })
 
     return PrevComponent
-  } else {
-    Components.set(NextComponent.__id, NextComponent)
 
+  } else if (Object.getPrototypeOf(NextComponent.prototype) == Object.prototype) {
+    // SFCs
+    Components.set(id(NextComponent), NextComponent)
+    return SFCWrappers.get(id(NextComponent))
+
+  } else {
+    // React.createElement() components I guess
     return NextComponent
   }
 }
@@ -74,9 +95,9 @@ const realCreateElement = React.createElement
 
 React.createElement = function createElement(type, ...args) {
   if (typeof type == 'function') {
-    if (Components.has(type.__id)) {
+    if (Components.has(id(type))) {
       type = updateComponent(type)
-    } else {
+    } else if (!Updated.has(type)) {
       type = patchComponent(type)
     }
   }
