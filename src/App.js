@@ -11,7 +11,7 @@ class Counter extends Component {
 
   tick() {
     this.setState({
-      counter: this.state.counter - this.props.increment
+      counter: this.state.counter + this.props.increment
     });
   }
 
@@ -37,7 +37,7 @@ export class App extends Component {
   }
 
   blah() {
-    console.log('double yay')
+    console.log('App.prototype.render was called')
   }
 
   render() {
@@ -47,7 +47,7 @@ export class App extends Component {
         <BogusContainer>
           <Counter increment={10} color={NICE} />
         </BogusContainer>
-        <Counter increment={2} color={SUPER_NICE} />
+        <Counter increment={100} color={SUPER_NICE} />
         <Counter increment={5} color={SUPER_NICE} />
         <OtherCounter increment={5} color={NICE} />
       </div>
@@ -60,3 +60,7 @@ App.__id = 'App'
 const BogusContainer = ({children}) => <div>bogus: {children}</div>
 
 BogusContainer.__id = 'BogusText'
+
+export const AppSFC = () => <App />
+
+AppSFC.__id = 'AppSFC'

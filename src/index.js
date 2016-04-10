@@ -102,15 +102,22 @@ React.createElement = function createElement(type, ...args) {
     }
   }
 
-  return realCreateElement(type, ...args)
+  return realCreateElement.call(this, type, ...args)
 }
 
 const tree = render(<App />, document.getElementById('root'));
 
+// import {Router, Route, browserHistory} from 'react-router'
+// const tree = render(
+//   <Router history={browserHistory} createElement={React.createElement}>
+//     <Route path='/' component={App} />
+//   </Router>,
+//   document.getElementById('root')
+// )
+
 if (module.hot) {
   module.hot.accept('./App', () => {
-    const NextApp = require('./App').App
-    updateComponent(NextApp)
+    updateComponent(require('./App').App)
     forceUpdate(tree)
   })
 }
