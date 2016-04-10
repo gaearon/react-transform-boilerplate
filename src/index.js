@@ -3,7 +3,7 @@ import { render } from 'react-dom';
 import { App } from './App';
 import forceUpdate from 'react-deep-force-update'
 
-const id = (Component) => Component.__id || Component.displayName || Component.name
+const id = (Component) => Component.__id
 
 const Components = new Map()
 const SFCWrappers = new Map()
@@ -94,7 +94,7 @@ const updateComponent = (NextComponent) => {
 const realCreateElement = React.createElement
 
 React.createElement = function createElement(type, ...args) {
-  if (typeof type == 'function') {
+  if (typeof type == 'function' && id(type)) {
     if (Components.has(id(type))) {
       type = updateComponent(type)
     } else if (!Updated.has(type)) {
