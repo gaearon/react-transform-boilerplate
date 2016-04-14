@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import _ from 'lodash'
 
 class Counter extends Component {
     constructor(props) {
@@ -9,7 +10,7 @@ class Counter extends Component {
 
     tick() {
         this.setState({
-            counter: this.state.counter + this.props.increment
+            counter: _.add(this.state.counter, this.props.increment)
         });
     }
 
