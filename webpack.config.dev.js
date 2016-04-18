@@ -3,7 +3,7 @@ var webpack = require('webpack');
 
 module.exports = {
   // or devtool: 'eval' to debug issues with compiled output:
-  devtool: 'cheap-module-eval-source-map',
+  devtool: '#cheap-module-eval-source-map',
   entry: [
     // necessary for hot reloading with IE:
     'eventsource-polyfill',
