@@ -7,6 +7,9 @@ Visual Studio Code:
 * [**Download**](https://code.visualstudio.com/)
 * [**Tips and Tricks**](https://github.com/Microsoft/vscode-tips-and-tricks)
 
+More great react vscode boilerplates:
+* https://github.com/remojansen/redux-bootstrap
+
 ## Installation
 
 
