@@ -1,7 +1,8 @@
-# React Transform Boilerplate for Visual Studio Code
+# React Hot Loader 3.0 Boilerplate for Visual Studio Code
 
 Based on:
 * [**react-transform-boilerplate**](https://github.com/gaearon/react-transform-boilerplate)
+* [**React Hot Loader 3.0**](https://github.com/gaearon/react-hot-boilerplate/pull/61)
 
 Visual Studio Code:
 * [**Download**](https://code.visualstudio.com/)
