@@ -1,10 +1,8 @@
 {
     "ambientDependencies": {
-        "express": "registry:dt/express#4.0.0+20160317120654",
-        "express-serve-static-core": "registry:dt/express-serve-static-core#0.0.0+20160317120654",
         "lodash": "registry:dt/lodash#3.10.0+20160330154726",
         "node": "registry:dt/node#4.0.0+20160317120654",
-        "react": "registry:dt/react#0.14.0+20160316155526",
-        "webpack": "registry:dt/webpack#1.12.9+20160316155526"
+        "react": "registry:dt/react#0.14.0+20160423065914",
+        "webpack": "registry:dt/webpack#1.12.9+20160321060707"
     }
 }

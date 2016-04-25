@@ -1,13 +1,12 @@
 {
-    "presets": [
-        "react",
-        "es2015"
+    "presets": [        
+        "es2015",
+        "stage-0",
+        "react"
     ],
     "env": {
         "development": {
-            "presets": [
-                "react-hmre"
-            ]
+            "plugins": ["react-hot-loader/babel"]
         }
     }
 }

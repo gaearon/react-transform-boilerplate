@@ -5,8 +5,9 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 module.exports = {
     devtool: 'cheap-module-inline-source-map',
     entry: [
-        'eventsource-polyfill',
-        'webpack-hot-middleware/client',
+        'webpack-dev-server/client?http://localhost:3000',
+        'webpack/hot/only-dev-server',
+        'react-hot-loader/patch',
         './src/index'
     ],
     output: {
