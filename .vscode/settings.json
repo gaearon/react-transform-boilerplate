@@ -3,7 +3,8 @@
 	"eslint.enable": true,	
 	"files.associations": {
 		"**/src/**/*.js": "javascriptreact", 
-		"**/node_modules/**/*.js": "javascript"
+		"**/node_modules/**/*.js": "javascript",
+		".babelrc": "json"
 	},
 	"files.exclude": {
 		".vscode/chrome/": true
