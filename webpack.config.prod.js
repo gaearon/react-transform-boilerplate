@@ -3,14 +3,20 @@ const webpack = require('webpack');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = {
-    entry: [
-        './src/index'
-    ],
+    entry: {
+        js: './src/index',
+        vendor: ['react', 'react-dom', 'lodash']
+    },
     output: {
         path: path.join(__dirname, 'dist'),
         filename: 'bundle.js'
     },
     plugins: [
+        new webpack.optimize.CommonsChunkPlugin({
+            name: 'vendor',
+            minChunks: Infinity,
+            filename: 'vendor.bundle.js'
+        }),
         new webpack.optimize.OccurenceOrderPlugin(),
         new webpack.DefinePlugin({
             'process.env': {
