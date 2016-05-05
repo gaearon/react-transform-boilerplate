@@ -11,11 +11,7 @@
             ]
         },
         "production": {
-            "plugins": [
-                "transform-react-remove-prop-types",
-                "transform-react-inline-elements",
-                "transform-react-constant-elements"
-            ]
+            "presets": ["es2015", "react", "react-optimize"]
         }
     }
 }
