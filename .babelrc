@@ -1,12 +1,19 @@
 {
-    "presets": [        
+    "presets": [
         "es2015",
         "stage-0",
         "react"
     ],
     "env": {
         "development": {
-            "plugins": ["react-hot-loader/babel"]
+            "plugins": [
+                "react-hot-loader/babel"
+            ]
+        },
+        "production": {
+            "plugins": [
+                "transform-react-remove-prop-types"
+            ]
         }
     }
 }
