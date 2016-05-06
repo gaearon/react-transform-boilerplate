@@ -6,7 +6,7 @@ const port = 3000;
 const host = 'localhost';
 
 module.exports = {
-    devtool: 'cheap-module-inline-source-map',
+    devtool: 'source-map',
     entry: [
         `webpack-dev-server/client?http://${host}:${port}`,
         'webpack/hot/only-dev-server',
