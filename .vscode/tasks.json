@@ -20,9 +20,6 @@
 				"run",
 				"start" 
 			],
-            "problemMatcher": [
-                "$eslint-stylish"   
-            ],
             "isWatching": true,
 			"taskName": "development"
 		},
@@ -47,7 +44,9 @@
 		{
 			"args": [
 				"run",
-				"lint"
+				"lint",
+				"--loglevel",
+				"silent"
 			],
             "problemMatcher": [
                 "$eslint-stylish"   
