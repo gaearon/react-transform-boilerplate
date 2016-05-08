@@ -33,7 +33,11 @@
 		},
 		{
 			"args": [
-				"install"
+				"install",
+				"--progress",
+				"false",
+				" --loglevel",
+				"info"
 			],
 			"taskName": "install"            
 		},		
