@@ -24,11 +24,11 @@
 				"fileLocation": "absolute",
 				"pattern": [				
 					{
-						"regexp": "^(.*?:\\s.*?.*?:\\s(.*):.*?)[\\s+]\\(([\\d-]+):([\\d-]+)\\)$",
-						"message": 1,
+						"regexp": "^(.*?:\\s.*?.*?:\\s(.*):(.*?))[\\s+]\\(([\\d-]+):([\\d-]+)\\)$",
+						"message": 3,
 						"file": 2,
-						"line": 3,
-						"column": 4						
+						"line": 4,
+						"column": 5						
 					}
 				]
 			},
@@ -46,11 +46,11 @@
 				"fileLocation": "absolute",
 				"pattern": [				
 					{
-						"regexp": "^(.*?:\\s.*?.*?:\\s(.*):.*?)[\\s+]\\(([\\d-]+):([\\d-]+)\\)$",
-						"message": 1,
+						"regexp": "^(.*?:\\s.*?.*?:\\s(.*):(.*?))[\\s+]\\(([\\d-]+):([\\d-]+)\\)$",
+						"message": 3,
 						"file": 2,
-						"line": 3,
-						"column": 4						
+						"line": 4,
+						"column": 5						
 					}
 				]
 			},
