@@ -18,20 +18,44 @@
 				"run",
 				"start"
 			],
-			"problemMatcher": {
-				"owner": "javascript",
-				"severity": "error",
-				"fileLocation": "absolute",
-				"pattern": [				
-					{
-						"regexp": "^(.*?:\\s.*?.*?:\\s(.*):(.*?))[\\s+]\\(([\\d-]+):([\\d-]+)\\)$",
-						"message": 3,
-						"file": 2,
-						"line": 4,
-						"column": 5						
-					}
-				]
-			},
+			"problemMatcher": [
+				{
+					"owner": "javascript",
+					"severity": "error",
+					"fileLocation": "absolute",
+					"pattern": [
+						{
+							"regexp": "^(.*?:\\s.*?.*?:\\s(.*):(.*?))[\\s+]\\(([\\d-]+):([\\d-]+)\\)$",
+							"message": 3,
+							"file": 2,
+							"line": 4,
+							"column": 5
+						}
+					]
+				},
+				{
+					"owner": "javascript",
+					"severity": "error",
+					"fileLocation": "relative",
+					"pattern": [
+						{
+							"regexp": "^ERROR in ./(.*)\\s?$",
+							"file": 1
+						},
+						{
+							"regexp": "^.*?Error:\\s(.*').*$",
+							"message": 1
+						}						,
+						{
+							"regexp": "^\\s+@.*?(\\d+)(?:-([\\d]+))?:(\\d+)(?:-([\\d]+))?\\s?$",
+							"line": 1,
+							"endLine": 2,
+							"column": 3,
+							"endColumn": 4
+						}
+					]
+				}
+			],
 			"isWatching": true,
 			"taskName": "development"
 		},
@@ -40,20 +64,44 @@
 				"run",
 				"build"
 			],
-			"problemMatcher": {
-				"owner": "javascript",
-				"severity": "error",
-				"fileLocation": "absolute",
-				"pattern": [				
-					{
-						"regexp": "^(.*?:\\s.*?.*?:\\s(.*):(.*?))[\\s+]\\(([\\d-]+):([\\d-]+)\\)$",
-						"message": 3,
-						"file": 2,
-						"line": 4,
-						"column": 5						
-					}
-				]
-			},
+			"problemMatcher": [
+				{
+					"owner": "javascript",
+					"severity": "error",
+					"fileLocation": "absolute",
+					"pattern": [
+						{
+							"regexp": "^(.*?:\\s.*?.*?:\\s(.*):(.*?))[\\s+]\\(([\\d-]+):([\\d-]+)\\)$",
+							"message": 3,
+							"file": 2,
+							"line": 4,
+							"column": 5
+						}
+					]
+				},
+				{
+					"owner": "javascript",
+					"severity": "error",
+					"fileLocation": "relative",
+					"pattern": [
+						{
+							"regexp": "^ERROR in ./(.*)\\s?$",
+							"file": 1
+						},
+						{
+							"regexp": "^.*?Error:\\s(.*').*$",
+							"message": 1
+						}						,
+						{
+							"regexp": "^\\s+@.*?(\\d+)(?:-([\\d]+))?:(\\d+)(?:-([\\d]+))?\\s?$",
+							"line": 1,
+							"endLine": 2,
+							"column": 3,
+							"endColumn": 4
+						}
+					]
+				}
+			],
 			"taskName": "release",
 			"isBuildCommand": true
 		},
