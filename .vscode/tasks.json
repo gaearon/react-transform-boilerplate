@@ -5,8 +5,6 @@
 // ${fileDirname}: the current opened file's dirname
 // ${fileExtname}: the current opened file's extension
 // ${cwd}: the current working directory of the spawned process
-
-
 {
 	"version": "0.1.0",
 	"command": "npm",
@@ -18,9 +16,26 @@
 		{
 			"args": [
 				"run",
-				"start" 
+				"start"
 			],
-            "isWatching": true,
+			"problemMatcher": {
+				"owner": "javascript",
+				"severity": "error",
+				"fileLocation": ["relative", "${workspaceRoot}"],
+				"pattern": [
+					{
+						"regexp": "^ERROR in (.*)\\s+$",
+						"file": 1
+					},
+					{
+						"regexp": "^(.*?)[\\s+]\\(([\\d-]+):([\\d-]+)\\)$",
+						"message": 1,
+						"line": 2,
+						"column": 3
+					}
+				]
+			},
+			"isWatching": true,
 			"taskName": "development"
 		},
 		{
@@ -28,6 +43,23 @@
 				"run",
 				"build"
 			],
+			"problemMatcher": {
+				"owner": "javascript",
+				"severity": "error",
+				"fileLocation": ["relative", "${workspaceRoot}"],
+				"pattern": [
+					{
+						"regexp": "^ERROR in (.*)\\s+$",
+						"file": 1
+					},
+					{
+						"regexp": "^(.*?)[\\s+]\\(([\\d-]+):([\\d-]+)\\)$",
+						"message": 1,
+						"line": 2,
+						"column": 3
+					}
+				]
+			},
 			"taskName": "release",
 			"isBuildCommand": true
 		},
@@ -39,8 +71,8 @@
 				" --loglevel",
 				"info"
 			],
-			"taskName": "install"            
-		},		
+			"taskName": "install"
+		},
 		{
 			"args": [
 				"run",
@@ -48,9 +80,9 @@
 				"--loglevel",
 				"silent"
 			],
-            "problemMatcher": [
-                "$eslint-stylish"   
-            ],
+			"problemMatcher": [
+				"$eslint-stylish"
+			],
 			"taskName": "lint",
 			"isTestCommand": true
 		}
