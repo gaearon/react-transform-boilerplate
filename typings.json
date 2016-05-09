@@ -1,8 +1,12 @@
 {
-    "ambientDependencies": {
-        "lodash": "registry:dt/lodash#3.10.0+20160330154726",
-        "node": "registry:dt/node#4.0.0+20160317120654",
-        "react": "registry:dt/react#0.14.0+20160423065914",
-        "webpack": "registry:dt/webpack#1.12.9+20160321060707"
-    }
+  "ambientDependencies": {
+    "lodash": "registry:dt/lodash#3.10.0+20160330154726",
+    "react": "registry:dt/react#0.14.0+20160423065914",
+    "react-dom": "registry:dt/react-dom#0.14.0+20160412154040"
+  },
+  "ambientDevDependencies": {
+    "babel-core": "registry:dt/babel-core#6.7.0+20160423062108",
+    "rimraf": "registry:dt/rimraf#0.0.0+20160317120654",
+    "webpack": "registry:dt/webpack#1.12.9+20160321060707"
+  }
 }
