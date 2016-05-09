@@ -25,7 +25,7 @@
 					"fileLocation": "absolute",
 					"pattern": [
 						{
-							"regexp": "^(.*?:\\s.*?.*?:\\s(.*):(.*?))[\\s+]\\(([\\d-]+):([\\d-]+)\\)$",
+							"regexp": "^(Module build failed:\\s.*?:\\s(.*):(.*?))[\\s+](?:\\(([\\d-]+):([\\d-]+)\\))?$",
 							"message": 3,
 							"file": 2,
 							"line": 4,
@@ -71,7 +71,7 @@
 					"fileLocation": "absolute",
 					"pattern": [
 						{
-							"regexp": "^(.*?:\\s.*?.*?:\\s(.*):(.*?))[\\s+]\\(([\\d-]+):([\\d-]+)\\)$",
+							"regexp": "^(Module build failed:\\s.*?:\\s(.*):(.*?))[\\s+](?:\\(([\\d-]+):([\\d-]+)\\))?$",
 							"message": 3,
 							"file": 2,
 							"line": 4,
