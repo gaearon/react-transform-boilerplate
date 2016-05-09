@@ -21,17 +21,14 @@
 			"problemMatcher": {
 				"owner": "javascript",
 				"severity": "error",
-				"fileLocation": ["relative", "${workspaceRoot}"],
-				"pattern": [
+				"fileLocation": "absolute",
+				"pattern": [				
 					{
-						"regexp": "^ERROR in (.*)\\s+$",
-						"file": 1
-					},
-					{
-						"regexp": "^(.*?)[\\s+]\\(([\\d-]+):([\\d-]+)\\)$",
+						"regexp": "^(.*?:\\s.*?.*?:\\s(.*):.*?)[\\s+]\\(([\\d-]+):([\\d-]+)\\)$",
 						"message": 1,
-						"line": 2,
-						"column": 3
+						"file": 2,
+						"line": 3,
+						"column": 4						
 					}
 				]
 			},
@@ -46,17 +43,14 @@
 			"problemMatcher": {
 				"owner": "javascript",
 				"severity": "error",
-				"fileLocation": ["relative", "${workspaceRoot}"],
-				"pattern": [
+				"fileLocation": "absolute",
+				"pattern": [				
 					{
-						"regexp": "^ERROR in (.*)\\s+$",
-						"file": 1
-					},
-					{
-						"regexp": "^(.*?)[\\s+]\\(([\\d-]+):([\\d-]+)\\)$",
+						"regexp": "^(.*?:\\s.*?.*?:\\s(.*):.*?)[\\s+]\\(([\\d-]+):([\\d-]+)\\)$",
 						"message": 1,
-						"line": 2,
-						"column": 3
+						"file": 2,
+						"line": 3,
+						"column": 4						
 					}
 				]
 			},
