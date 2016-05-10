@@ -36,7 +36,6 @@ A react boilerplate project for Visual Studio Code based on [react-transform-boi
 
 ## Visual Studio Code shortcuts
 
-*   <kbd>F1</kbd> > Run Task > development
 *   <kbd>F5</kbd> to start debugging
 *   <kbd>CTRL</kbd>+<kbd>SHIFT</kbd>+<kbd>B</kbd> to build a production release
 *   <kbd>CTRL</kbd>+<kbd>SHIFT</kbd>+<kbd>T</kbd> to run eslint
