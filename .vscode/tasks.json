@@ -18,7 +18,7 @@
 				"run",
 				"start",
 				"--react-hot-boilerplate-vscode:port=3000",
-				"--react-hot-boilerplate-vscode:host=localhost"  // use these command line args to override host and port of the dev-server. default values are defined in package.json config section.
+				"--react-hot-boilerplate-vscode:host=localhost" // use these command line args to override host and port of the dev-server. default values are defined in package.json config section.
 			],
 			"problemMatcher": [
 				{
@@ -47,7 +47,7 @@
 						{
 							"regexp": "^.*?Error:\\s(.*').*$",
 							"message": 1
-						}						,
+						},
 						{
 							"regexp": "^\\s+@.*?(\\d+)(?:-([\\d]+))?:(\\d+)(?:-([\\d]+))?\\s?$",
 							"line": 1,
@@ -93,7 +93,7 @@
 						{
 							"regexp": "^.*?Error:\\s(.*').*$",
 							"message": 1
-						}						,
+						},
 						{
 							"regexp": "^\\s+@.*?(\\d+)(?:-([\\d]+))?:(\\d+)(?:-([\\d]+))?\\s?$",
 							"line": 1,
