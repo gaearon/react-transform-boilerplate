@@ -22,6 +22,15 @@
 			],
 			"problemMatcher": [
 				{
+					"owner": "custom",
+					"pattern": [],
+					"watching": {
+						"activeOnStart": true,
+						"beginsPattern": "webpack: bundle is now INVALID",
+						"endsPattern": "webpack: bundle is now VALID"
+					}
+				},
+				{
 					"owner": "javascript",
 					"severity": "error",
 					"fileLocation": "absolute",
