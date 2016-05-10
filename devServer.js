@@ -3,6 +3,9 @@ const webpack = require('webpack');
 const WebpackDevServer = require('webpack-dev-server');
 const config = require('./webpack.config.dev');
 
+const port = process.env.npm_package_config_port || 3000;
+const host = process.env.npm_package_config_host || 'localhost';
+
 new WebpackDevServer(webpack(config), {
     publicPath: config.output.publicPath,
     hot: true,
@@ -12,10 +15,10 @@ new WebpackDevServer(webpack(config), {
         chunks: false,
         'errors-only': true
     }
-}).listen(config.output.server.port, config.output.server.host, function (err) {
+}).listen(port, host, function (err) {
     if (err) {
         console.log(err);
     }
 
-    console.log(`Listening at http://${config.output.server.host}:${config.output.server.port}/`);
+    console.log(`Listening at http://${host}:${port}/`);
 });

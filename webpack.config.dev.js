@@ -2,24 +2,17 @@ const path = require('path');
 const webpack = require('webpack');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 
-const port = 3000;
-const host = 'localhost';
-
 module.exports = {
     devtool: '#source-map',
     entry: [
-        `webpack-dev-server/client?http://${host}:${port}`,
+        `webpack-dev-server/client?http://${process.env.npm_package_config_host}:${process.env.npm_package_config_port}`,
         'webpack/hot/only-dev-server',
         'react-hot-loader/patch',
         './src/index.dev'
     ],
     output: {
         path: path.join(__dirname, 'dist'),
-        filename: 'bundle.js',
-        server: {
-            host,
-            port  
-        }      
+        filename: 'bundle.js'     
     },
     plugins: [
         new webpack.HotModuleReplacementPlugin(),

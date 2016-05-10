@@ -58,6 +58,8 @@
     "react-dom": "^15.0.2"
   },
   "config": {
+    "host": "localhost",
+    "port": 3000,
     "ghooks": {
       "pre-commit": "npm run lint"
     }
