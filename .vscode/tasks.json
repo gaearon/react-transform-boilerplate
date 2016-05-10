@@ -9,7 +9,7 @@
 	"version": "0.1.0",
 	"command": "npm",
 	"isShellCommand": true,
-	"echoCommand": true,
+	"echoCommand": false,
 	"suppressTaskName": true,
 	"showOutput": "always",
 	"tasks": [
@@ -33,6 +33,7 @@
 				{
 					"owner": "javascript",
 					"severity": "error",
+					"applyTo": "closedDocuments",
 					"fileLocation": "absolute",
 					"pattern": [
 						{
@@ -47,6 +48,7 @@
 				{
 					"owner": "javascript",
 					"severity": "error",
+					"applyTo": "closedDocuments",
 					"fileLocation": "relative",
 					"pattern": [
 						{
@@ -73,12 +75,14 @@
 		{
 			"args": [
 				"run",
-				"build"
+				"build",
+				"--silent"
 			],
 			"problemMatcher": [
 				{
 					"owner": "javascript",
 					"severity": "error",
+					"applyTo": "closedDocuments",
 					"fileLocation": "absolute",
 					"pattern": [
 						{
@@ -93,6 +97,7 @@
 				{
 					"owner": "javascript",
 					"severity": "error",
+					"applyTo": "closedDocuments",
 					"fileLocation": "relative",
 					"pattern": [
 						{
@@ -122,7 +127,7 @@
 				"--progress",
 				"false",
 				" --loglevel",
-				"info"
+				"http"
 			],
 			"taskName": "install"
 		},
