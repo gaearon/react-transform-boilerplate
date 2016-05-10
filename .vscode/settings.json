@@ -13,6 +13,8 @@
 	"files.watcherExclude": {
 		".vscode/chrome/": true
 	},
+	"html.format.extraLiners": "!",
+	"html.format.indentInnerHtml": true,
 	"search.exclude": {
 		"dist/": true
 	}
