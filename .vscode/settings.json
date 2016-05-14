@@ -5,7 +5,8 @@
 	"files.associations": {
 		"**/src/**/*.js": "javascriptreact",
 		"**/node_modules/**/*.js": "javascript",
-		".babelrc": "json"
+		".babelrc": "json",
+		".eslintignore": "gitignore"
 	},
 	"files.exclude": {
 		".vscode/chrome/": true
