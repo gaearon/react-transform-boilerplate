@@ -1,9 +1,9 @@
 // Place your settings in this file to overwrite default and user settings.
 {
 	"editor.formatOnType": true,
-	"eslint.enable": true,	
+	"eslint.enable": true,
 	"files.associations": {
-		"**/src/**/*.js": "javascriptreact", 
+		"**/src/**/*.js": "javascriptreact",
 		"**/node_modules/**/*.js": "javascript",
 		".babelrc": "json"
 	},
@@ -15,6 +15,87 @@
 	},
 	"html.format.extraLiners": "!",
 	"html.format.indentInnerHtml": true,
+	"json.schemas": [
+		{
+			"fileMatch": [
+				"/package.json"
+			],
+			"schema": {
+				"type": "object",
+				"properties": {
+					"config": {
+						"properties": {
+							"port": {
+								"type": "number",
+								"description": "The port of the webpack-dev-server"
+							},
+							"host": {
+								"type": "string",
+								"description": "The hostname or ip of the webpack-dev-server"
+							},
+							"ghooks": {
+								"type": "object",
+								"description": "Git hook configurations",
+								"properties": {									
+									"applypatch-msg": {
+										"type": "string"
+									},
+									"pre-applypatch": {
+										"type": "string"
+									},
+									"post-applypatch": {
+										"type": "string"
+									},
+									"pre-commit": {
+										"type": "string"
+									},
+									"prepare-commit-msg": {
+										"type": "string"
+									},
+									"commit-msg": {
+										"type": "string"
+									},
+									"post-commit": {
+										"type": "string"
+									},
+									"pre-rebase": {
+										"type": "string"
+									},
+									"post-checkout": {
+										"type": "string"
+									},
+									"post-merge": {
+										"type": "string"
+									},
+									"pre-push": {
+										"type": "string"
+									},
+									"pre-receive": {
+										"type": "string"
+									},
+									"update": {
+										"type": "string"
+									},
+									"post-receive": {
+										"type": "string"
+									},
+									"post-update": {
+										"type": "string"
+									},
+									"pre-auto-gc": {
+										"type": "string"
+									},
+									"post-rewrite": {
+										"type": "string"
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+	],
 	"search.exclude": {
 		"dist/": true
 	}
