@@ -127,7 +127,7 @@
 				"install",
 				"--progress",
 				"false",
-				" --loglevel",
+				"--loglevel",
 				"http"
 			],
 			"taskName": "install"
