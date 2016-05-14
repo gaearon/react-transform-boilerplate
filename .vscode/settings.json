@@ -28,11 +28,13 @@
 						"properties": {
 							"port": {
 								"type": "number",
-								"description": "The port of the webpack-dev-server"
+								"description": "The port of the webpack-dev-server",
+								"default": 3000
 							},
 							"host": {
 								"type": "string",
-								"description": "The hostname or ip of the webpack-dev-server"
+								"description": "The hostname or ip of the webpack-dev-server",
+								"default": "localhost"
 							},
 							"ghooks": {
 								"type": "object",
