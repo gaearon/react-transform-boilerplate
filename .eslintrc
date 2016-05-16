@@ -49,5 +49,10 @@
         "import",
         "lodash",
         "react"
-    ]
+    ],
+    "settings": {
+        "import/resolver": {
+            "webpack": { "config": "webpack.config.dev.js" }
+        }
+    }
 }
