@@ -1,6 +1,5 @@
 {
     "compilerOptions": {
-        "target": "ES6",
         "allowSyntheticDefaultImports": true
     },
     "exclude": [
