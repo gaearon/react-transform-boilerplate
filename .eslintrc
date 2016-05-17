@@ -16,7 +16,7 @@
         "plugin:import/errors",
         "plugin:import/warnings",
         "plugin:lodash/recommended",
-        "plugin:react/recommended"        
+        "plugin:react/recommended"
     ],
     "parser": "babel-eslint",
     "rules": {
@@ -42,6 +42,14 @@
             {
                 "ignoreStateless": true
             }
+        ],
+        "lodash/prefer-lodash-method": [
+            2,
+            {
+                "ignoreObjects": [
+                    "React.Children"
+                ]
+            }
         ]
     },
     "plugins": [
@@ -52,7 +60,9 @@
     ],
     "settings": {
         "import/resolver": {
-            "webpack": { "config": "webpack.config.dev.js" }
+            "webpack": {
+                "config": "webpack.config.dev.js"
+            }
         }
     }
 }
