@@ -25,6 +25,7 @@ A react boilerplate project for Visual Studio Code based on [react-transform-boi
 * [ReactSnippets](https://marketplace.visualstudio.com/items?itemName=xabikos.ReactSnippets)
 * [typings-autoinstaller](https://marketplace.visualstudio.com/items?itemName=jvitor83.typings-autoinstaller)
 * [vscode-npm](https://marketplace.visualstudio.com/items?itemName=fknop.vscode-npm)
+* [npm-intellisense](https://marketplace.visualstudio.com/items?itemName=christian-kohler.npm-intellisense)
 
 ## Installation
 
