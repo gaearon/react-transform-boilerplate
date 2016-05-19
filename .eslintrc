@@ -18,6 +18,9 @@
         "plugin:lodash/recommended",
         "plugin:react/recommended"
     ],
+    "globals": {
+        "__DEV__": true
+    },
     "parser": "babel-eslint",
     "rules": {
         "quotes": [

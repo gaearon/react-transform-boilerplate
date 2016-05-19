@@ -15,6 +15,9 @@ module.exports = {
         filename: 'bundle.js'     
     },
     plugins: [
+        new webpack.DefinePlugin({
+            '__DEV__': true
+        }),
         new webpack.HotModuleReplacementPlugin(),
         new webpack.NoErrorsPlugin(),
         new HtmlWebpackPlugin({
