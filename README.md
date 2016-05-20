@@ -9,6 +9,7 @@ A react boilerplate project for Visual Studio Code based on [react-transform-boi
 * Debugging react ES2015 classes inside vscode via [vscode-chrome-debug](https://github.com/Microsoft/vscode-chrome-debug) extension
 * Easy access to install, build and debugging commands via vscode command palette and keyboard shortcuts
 * JSX code analysis (linting) with autofixing support via [vscode-eslint](https://github.com/Microsoft/vscode-eslint) extension
+* [React Hot Loading](https://www.youtube.com/watch?v=xsSnOQynTHs)
 
 ## Visual Studio Code
 
