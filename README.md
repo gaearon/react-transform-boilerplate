@@ -32,7 +32,7 @@ A react boilerplate project for Visual Studio Code based on [react-transform-boi
 1.   `git clone https://github.com/skolmer/react-hot-boilerplate-vscode.git`
 2.   open react-hot-boilerplate-vscode in Visual Studio Code
 3.   make sure you have [vscode-chrome-debug](https://marketplace.visualstudio.com/items?itemName=msjsdiag.debugger-for-chrome) and [vscode-eslint](https://marketplace.visualstudio.com/items?itemName=dbaeumer.vscode-eslint) extension installed
-4.   press <kbd>F1</kbd> > Run Task > install (or npm install) to install all dependencies
+4.   press <kbd>F1</kbd> > `Run Task` > `install` (or `npm install`) to install all dependencies
 
 
 ## Visual Studio Code shortcuts
