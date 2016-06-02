@@ -1,0 +1,8 @@
+{
+  "resolution": "main",
+  "tree": {
+    "src": "https://raw.githubusercontent.com/DefinitelyTyped/DefinitelyTyped/0754cc639a1354a5f52df45c1fd1b0293b90224d/babel-core/babel-core.d.ts",
+    "raw": "registry:dt/babel-core#6.7.0+20160423062108",
+    "typings": "https://raw.githubusercontent.com/DefinitelyTyped/DefinitelyTyped/0754cc639a1354a5f52df45c1fd1b0293b90224d/babel-core/babel-core.d.ts"
+  }
+}
