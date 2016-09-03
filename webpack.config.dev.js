@@ -3,7 +3,7 @@ const webpack = require('webpack');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = {
-    devtool: '#cheap-module-eval-source-map',
+    devtool: '#cheap-eval-source-map',
     entry: [
         `webpack-dev-server/client?http://${process.env.npm_package_config_host}:${process.env.npm_package_config_port}`,
         'webpack/hot/only-dev-server',
