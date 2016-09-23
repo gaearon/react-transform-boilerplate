@@ -12,6 +12,11 @@
             "presets": [
                 "react-optimize"
             ]
+        },
+        "development": {
+            "plugins": [
+                "transform-react-jsx-source"
+            ]
         }
     }
 }
