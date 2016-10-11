@@ -39,7 +39,7 @@
 							"ghooks": {
 								"type": "object",
 								"description": "Git hook configurations",
-								"properties": {									
+								"properties": {
 									"applypatch-msg": {
 										"type": "string"
 									},
@@ -102,5 +102,6 @@
 	"search.exclude": {
 		"dist/": true,
 		"typings/": true
-	}
+	},
+	"typescript.check.workspaceVersion": false
 }
