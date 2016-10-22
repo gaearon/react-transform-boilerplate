@@ -9,7 +9,8 @@
                 "url": "http://localhost:3000/index.html", 
                 "userDataDir": "${workspaceRoot}/.vscode/chrome",
                 "sourceMaps": true,
-                "preLaunchTask": "development"
+                "preLaunchTask": "development",
+                "smartStep": true
             }
 	]
 }
