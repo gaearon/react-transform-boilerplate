@@ -10,7 +10,8 @@
                 "userDataDir": "${workspaceRoot}/.vscode/chrome",
                 "sourceMaps": true,
                 "preLaunchTask": "development",
-                "smartStep": true
+                "smartStep": true,
+                "internalConsoleOptions": "openOnSessionStart"
             }
 	]
 }
