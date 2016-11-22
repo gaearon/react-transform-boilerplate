@@ -5,7 +5,7 @@ A react boilerplate project for Visual Studio Code based on [react-transform-boi
 ![](overview.gif)
 
 ## Features
-* Intellisense (code completion) for external libraries via [typings](https://github.com/typings/typings)
+* Intellisense (code completion) for external libraries via [Automatic Type Acquisition (ATA)](https://code.visualstudio.com/updates/v1_7) 
 * Debugging react ES2015 classes inside vscode via [vscode-chrome-debug](https://github.com/Microsoft/vscode-chrome-debug) extension
 * Easy access to install, build and debugging commands via vscode command palette and keyboard shortcuts
 * JSX code analysis (linting) with autofixing support via [vscode-eslint](https://github.com/Microsoft/vscode-eslint) extension
@@ -24,7 +24,6 @@ A react boilerplate project for Visual Studio Code based on [react-transform-boi
 ### Recommended Extensions
 
 * [ReactSnippets](https://marketplace.visualstudio.com/items?itemName=xabikos.ReactSnippets)
-* [typings-autoinstaller](https://marketplace.visualstudio.com/items?itemName=jvitor83.typings-autoinstaller)
 * [vscode-npm](https://marketplace.visualstudio.com/items?itemName=fknop.vscode-npm)
 * [npm-intellisense](https://marketplace.visualstudio.com/items?itemName=christian-kohler.npm-intellisense)
 
