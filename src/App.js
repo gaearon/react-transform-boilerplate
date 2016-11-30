@@ -1,39 +1,50 @@
 import React, { Component } from 'react';
-import { NICE, SUPER_NICE } from './colors';
 
-class Counter extends Component {
-  constructor(props) {
-    super(props);
-    this.state = { counter: 0 };
-    this.interval = setInterval(() => this.tick(), 1000);
-  }
+class App extends Component {
+    constructor(){
+      super();
+      this.state = {
+        value: 20
+      }
+      this.handleValueChange = this.handleValueChange.bind(this);
+      this.handleReset = this.handleReset.bind(this);
+    }
 
-  tick() {
-    this.setState({
-      counter: this.state.counter + this.props.increment
-    });
-  }
+    handleValueChange(valueChange) {
+      this.setState({
+        value: this.state.value + valueChange
+      })
+    }
 
-  componentWillUnmount() {
-    clearInterval(this.interval);
-  }
+    handleReset() {
+      this.setState({
+        value: 20
+      })
+    }
 
-  render() {
-    return (
-      <h1 style={{ color: this.props.color }}>
-        Counter ({this.props.increment}): {this.state.counter}
-      </h1>
-    );
-  }
+    render() {
+      return(
+        <div>
+          <Counter value={this.state.value}/>
+          <Button onClick={() => this.handleValueChange(1)} text="Increase"/>
+          <Button onClick={() => this.handleValueChange(-1)} text="Decrease"/>
+          <Button onClick={() => this.handleReset()} text="Reset"/>
+        </div>
+      )
+    }
 }
 
-export class App extends Component {
-  render() {
-    return (
-      <div>
-        <Counter increment={1} color={NICE} />
-        <Counter increment={5} color={SUPER_NICE} />
-      </div>
-    );
-  }
-}
+const Counter = ({value}) => (
+    <div>
+      {value}
+    </div>
+  )
+
+
+const Button = ({onClick, text}) => (
+    <div onClick={onClick}>
+     {text}
+    </div>
+  )
+
+export default App;
