@@ -4,6 +4,9 @@
 
 # React Transform Boilerplate
 
+[![Dependency Status](https://david-dm.org/gaearon/react-transform-boilerplate.svg)](https://david-dm.org/gaearon/react-transform-boilerplate)
+[![devDependency Status](https://david-dm.org/gaearon/react-transform-boilerplate/dev-status.svg)](https://david-dm.org/gaearon/react-transform-boilerplate#info=devDependencies)
+
 [![react-transform channel on Discord](https://img.shields.io/badge/discord-react--transform%40reactiflux-61DAFB.svg?style=flat-square)](http://www.reactiflux.com)
 
 ## 🚧🚧🚧🚧🚧
