@@ -9,10 +9,10 @@
 		".eslintignore": "gitignore"
 	},
 	"files.exclude": {
-		".vscode/chrome/": true
+		".vscode/chrome/**": true
 	},
 	"files.watcherExclude": {
-		".vscode/chrome/": true
+		".vscode/chrome/**": true
 	},
 	"html.format.extraLiners": "!",
 	"html.format.indentInnerHtml": true,
@@ -100,8 +100,7 @@
 		}
 	],
 	"search.exclude": {
-		"dist/": true,
-		"typings/": true
+		"dist/**": true
 	},
 	"typescript.check.workspaceVersion": false
 }

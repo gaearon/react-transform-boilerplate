@@ -6,12 +6,15 @@
                 "type": "chrome",
                 "request": "launch",
                 "webRoot": "${workspaceRoot}",
-                "url": "http://localhost:3000/index.html", 
+                "url": "http://localhost:3000", 
                 "userDataDir": "${workspaceRoot}/.vscode/chrome",
                 "sourceMaps": true,
                 "preLaunchTask": "development",
                 "smartStep": true,
-                "internalConsoleOptions": "openOnSessionStart"
+                "internalConsoleOptions": "openOnSessionStart",
+                "skipFiles": [
+                    "node_modules/**"
+                ]
             }
 	]
 }
