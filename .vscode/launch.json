@@ -14,7 +14,10 @@
                 "internalConsoleOptions": "openOnSessionStart",
                 "skipFiles": [
                     "node_modules/**"
-                ]
+                ],
+                "sourceMapPathOverrides": {
+                    "webpack:///*": "${webRoot}/*"
+                }
             }
 	]
 }

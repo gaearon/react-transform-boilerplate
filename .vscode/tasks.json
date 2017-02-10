@@ -27,8 +27,8 @@
 					"pattern": [],
 					"watching": {
 						"activeOnStart": true,
-						"beginsPattern": "webpack: bundle is now INVALID",
-						"endsPattern": "webpack: bundle is now VALID"
+						"beginsPattern": "webpack: Compiling...",
+						"endsPattern": "webpack: Compiled successfully."
 					}
 				},
 				{
