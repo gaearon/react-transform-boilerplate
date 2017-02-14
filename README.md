@@ -41,10 +41,6 @@ A react boilerplate project for Visual Studio Code based on [react-transform-boi
 *   <kbd>CTRL</kbd>+<kbd>SHIFT</kbd>+<kbd>B</kbd> to build a production release
 *   <kbd>CTRL</kbd>+<kbd>SHIFT</kbd>+<kbd>T</kbd> to run eslint
 
-## Other vscode react boilerplates:
-
-* https://github.com/remojansen/redux-bootstrap
-
 ## License
 
 CC0 (public domain)
