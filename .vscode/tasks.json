@@ -24,11 +24,13 @@
 			"problemMatcher": [
 				{
 					"owner": "custom",
-					"pattern": [],
+					"pattern": {
+					  "regexp": "____________"
+					},
 					"watching": {
 						"activeOnStart": true,
-						"beginsPattern": "webpack: Compiling...",
-						"endsPattern": "webpack: Compiled successfully."
+						"beginsPattern": "^webpack: Compiling\\.\\.\\.$",
+						"endsPattern": "^webpack: Compiled successfully\\.$"
 					}
 				},
 				{
@@ -70,7 +72,7 @@
 					]
 				}
 			],
-			"isWatching": true,
+			"isBackground": true,
 			"taskName": "development"
 		},
 		{
