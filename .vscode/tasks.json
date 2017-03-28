@@ -30,7 +30,7 @@
 					"watching": {
 						"activeOnStart": true,
 						"beginsPattern": "^webpack: Compiling\\.\\.\\.$",
-						"endsPattern": "^webpack: Compiled successfully\\.$"
+						"endsPattern": "^webpack: (Compiled successfully|Failed to compile)\\.$"
 					}
 				},
 				{
