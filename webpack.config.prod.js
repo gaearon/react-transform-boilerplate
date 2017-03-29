@@ -14,12 +14,6 @@ module.exports = {
         filename: 'bundle.js'
     },
     plugins: [
-        new webpack.optimize.CommonsChunkPlugin({
-            name: 'vendor',
-            minChunks: Infinity,
-            filename: 'vendor.bundle.js'
-        }),
-        new webpack.optimize.OccurenceOrderPlugin(),
         new webpack.DefinePlugin({
             '__DEV__': false,
             'process.env': {
@@ -34,17 +28,30 @@ module.exports = {
                 comments: false
             }
         }),
+         new webpack.optimize.CommonsChunkPlugin({
+            name: 'vendor',
+            minChunks: Infinity,
+            filename: 'vendor.bundle.js'
+        }),
         new HtmlWebpackPlugin({
-            template: 'index.html', // Load a custom template 
-            inject: 'body', // Inject all scripts into the body 
+            template: 'index.html', // Load a custom template
+            inject: 'body', // Inject all scripts into the body
             hash: true
         })
     ],
     module: {
-        loaders: [{
-            test: /\.js$/,
-            loaders: ['babel'],
-            include: path.join(__dirname, 'src')
+        rules: [{
+            test: /\.jsx?$/,
+            use: [{
+                loader: 'babel-loader'
+            }]
         }]
+    },
+    resolve: {
+        modules: [
+            path.join(__dirname, 'src'),
+            'node_modules'
+        ],
+        extensions: ['.js', '.jsx']
     }
 };

@@ -102,5 +102,5 @@
 	"search.exclude": {
 		"dist/**": true
 	},
-	"typescript.check.workspaceVersion": false
+	"typescript.check.tscVersion": false
 }
