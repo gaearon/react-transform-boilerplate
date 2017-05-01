@@ -43,6 +43,10 @@ Syntax errors are displayed in an overlay using **[@glenjamin](https://github.co
 
 ```bash
 git clone https://github.com/gaearon/react-transform-boilerplate.git
+
+# or
+curl -sSL https://github.com/gaearon/react-transform-boilerplate/archive/master.zip | tar xv --strip-components 1
+
 cd react-transform-boilerplate
 npm install
 npm start
