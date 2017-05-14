@@ -15,6 +15,7 @@ A react boilerplate project for Visual Studio Code based on [react-transform-boi
 
 * [**Download**](https://code.visualstudio.com/)
 * [**Tips and Tricks**](https://github.com/Microsoft/vscode-tips-and-tricks)
+* [**Supercharge your JavaScript debugging workflow with Visual Studio Code (Build 2017)**](https://channel9.msdn.com/Events/Build/2017/T6071)
 
 ### Required Extensions
 
