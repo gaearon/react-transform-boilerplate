@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import PropTypes from 'prop-types'
 import add from 'lodash/add'
 
 class Counter extends Component {
@@ -28,8 +29,8 @@ class Counter extends Component {
 }
 
 Counter.propTypes = {
-    'increment': React.PropTypes.number.isRequired,
-    'color': React.PropTypes.string.isRequired
+    'increment': PropTypes.number.isRequired,
+    'color': PropTypes.string.isRequired
 }
 
 export default Counter

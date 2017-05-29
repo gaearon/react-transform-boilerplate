@@ -38,11 +38,11 @@
         "prefer-spread": 2,
         "prefer-const": 2,
         "prefer-template": 2,
-        "babel/generator-star-spacing": 1,
+        "generator-star-spacing": 1,
         "babel/new-cap": 1,
-        "babel/object-shorthand": 1,
-        "babel/arrow-parens": 1,
-        "babel/no-await-in-loop": 1,
+        "object-shorthand": 1,
+        "arrow-parens": 1,
+        "no-await-in-loop": 1,
         "react/no-multi-comp": [
             2,
             {
