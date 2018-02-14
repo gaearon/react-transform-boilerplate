@@ -11,6 +11,10 @@ A react boilerplate project for Visual Studio Code based on [react-transform-boi
 * JSX code analysis (linting) with autofixing support via [vscode-eslint](https://github.com/Microsoft/vscode-eslint) extension
 * [React Hot Loading](https://www.youtube.com/watch?v=xsSnOQynTHs)
 
+### Server and Client Side Debugging
+
+[react-hot-boilerplate-vscode-fullstack](https://github.com/GGAlanSmithee/react-hot-boilerplate-vscode/tree/server-debugging) (by [GGAlanSmithee](https://github.com/GGAlanSmithee))
+
 ## Visual Studio Code
 
 * [**Download**](https://code.visualstudio.com/)
@@ -41,6 +45,7 @@ A react boilerplate project for Visual Studio Code based on [react-transform-boi
 *   <kbd>F5</kbd> to start debugging
 *   <kbd>CTRL</kbd>+<kbd>SHIFT</kbd>+<kbd>B</kbd> to build a production release
 *   <kbd>CTRL</kbd>+<kbd>SHIFT</kbd>+<kbd>T</kbd> to run eslint
+
 
 ## License
 
